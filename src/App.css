@@ -1,0 +1,348 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+/* Left Side - Branding */
+.brand-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+}
+
+.logo-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.brand-name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.brand-tagline {
+  margin-bottom: 40px;
+}
+
+.brand-tagline p {
+  font-size: 1.3rem;
+  color: #00ffff;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateX(10px);
+  border-color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 5px #00ffff);
+}
+
+.feature span:last-child {
+  color: #88ffff;
+  font-weight: 500;
+}
+
+/* Right Side - Form */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.2);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-header h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+.form-header p {
+  color: #88ffff;
+  font-size: 1rem;
+}
+
+/* Form Styles */
+.auth-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #88ffff;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.form-group input::placeholder {
+  color: #88aaaa;
+}
+
+/* Photo Section */
+.photo-section {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.photo-notice {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+  color: #00ffff;
+  font-size: 0.9rem;
+}
+
+.camera-preview {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.camera-frame {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgba(0, 255, 255, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.camera-placeholder {
+  color: #88aaaa;
+  text-align: center;
+}
+
+.camera-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  display: block;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.camera-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4444;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
+
+/* Buttons */
+.submit-btn, .capture-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn {
+  background: #00ffff;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+}
+
+.submit-btn:hover {
+  background: #00cccc;
+  transform: translateY(-2px);
+}
+
+.capture-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 10px;
+}
+
+.capture-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #00ffff;
+  transform: translateY(-2px);
+}
+
+/* Auth Switch */
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-switch p {
+  color: #88ffff;
+  margin-bottom: 10px;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: #ff00ff;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.switch-btn:hover {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .brand-section, .form-section {
+    padding: 20px;
+  }
+  
+  .form-wrapper {
+    padding: 30px 20px;
+  }
+  
+  .camera-preview {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .camera-preview {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .camera-icon {
+    font-size: 2.5rem;
+  }
+  
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
+}
