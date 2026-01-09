@@ -1,21 +1,30 @@
-import React from 'react';
-import Dashboard from './components/Dashboard';
+import { useState } from "react";
+import LoginForm from "./components/LoginForm";
+import RegistrationForm from "./components/RegistrationForm";
 
 function App() {
-  // Mock user data for dashboard
-  const mockUser = {
-    id: 1,
-    name: 'John Student',
-    email: 'john@student.com',
-    role: 'student',
-    studentId: 'STU001',
-    faceRegistered: true
+  const [page, setPage] = useState("login");
+
+  const handleLogin = (user) => {
+    console.log("Logged in user:", user);
+    alert("Login Successful!");
   };
 
   return (
-    <div className="App">
-      <Dashboard user={mockUser} />
-    </div>
+    <>
+      {page === "login" && (
+        <LoginForm
+          onLogin={handleLogin}
+          onSwitchToRegister={() => setPage("register")}
+        />
+      )}
+
+      {page === "register" && (
+        <RegistrationForm
+          onSwitchToLogin={() => setPage("login")}
+        />
+      )}
+    </>
   );
 }
 
